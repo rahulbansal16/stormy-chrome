@@ -1,0 +1,32 @@
+{
+  
+    "name": "Stormy Error",
+    "version": "1.0",
+    "description": "Build an Extension!",
+    "permissions": ["tabs"],
+    "manifest_version": 2,
+    "icons": {
+        "16": "images/get_started16.png",
+        "32": "images/get_started32.png",
+        "48": "images/get_started48.png",
+        "128": "images/get_started128.png"
+    },
+    "page_action": {
+        "default_icon": "images/get_started16.png",
+        "default_popup": "popup.html",
+        "default_title": "Stormy Error"
+    },
+    "background": {
+        "scripts": ["eventPage.js"],
+        "persistent": false
+    },
+    "content_scripts": [
+        {
+            "matches": ["http://localhost/*"],
+            "all_frames": true,
+            "run_at": "document_end",
+            "js":["content.js"]
+        }
+    ]
+    
+}
