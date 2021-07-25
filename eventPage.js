@@ -1,6 +1,6 @@
 var contextMenuItem = {
     "id": "quacky",
-    "title": "quacky",
+    "title": "Send Whatsapp Message",
     "contexts": ["selection"]
 }
 
