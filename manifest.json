@@ -1,18 +1,17 @@
 {
   
-    "name": "Quacky",
+    "name": "Stormy",
     "version": "1.0",
     "description": "Sends Whatsapp Message to a phone Number without adding it.",
     "permissions": ["tabs","contextMenus"],
     "manifest_version": 2,
     "icons": {
-        "16": "images/get_started16.png",
-        "32": "images/get_started32.png",
-        "48": "images/get_started48.png",
-        "128": "images/get_started128.png"
+        "16": "./assets/extension-icons/logo-16.png",
+        "128": "./assets/extension-icons/logo-128.png",
+        "48": "./assets/extension-icons/logo-48.png"
     },
     "page_action": {
-        "default_icon": "images/get_started16.png",
+        "default_icon": "./assets/extension-icons/logo-16.png",
         "default_title": "Quacky"
     },
     "background": {
