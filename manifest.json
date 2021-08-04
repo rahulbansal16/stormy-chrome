@@ -3,7 +3,7 @@
     "name": "Stormy",
     "version": "1.0",
     "description": "Sends Whatsapp Message to a phone Number without adding it.",
-    "permissions": ["tabs","contextMenus"],
+    "permissions": ["contextMenus"],
     "manifest_version": 2,
     "icons": {
         "16": "./assets/extension-icons/logo-16.png",
@@ -17,14 +17,5 @@
     "background": {
         "scripts": ["eventPage.js"],
         "persistent": false
-    },
-    "content_scripts": [
-        {
-            "matches": ["<all_urls>"],
-            "all_frames": true,
-            "run_at": "document_end",
-            "js":["content.js"]
-        }
-    ]
-    
+    }
 }
