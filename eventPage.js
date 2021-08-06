@@ -1,3 +1,5 @@
+// import parsePhoneNumber from './libPhoneNumber'
+var parsePhoneNumber = libphonenumber.parsePhoneNumber
 var contextMenuItem = {
     "id": "quacky",
     "title": "Send Whatsapp Message",
@@ -19,8 +21,13 @@ const getNumber = texts => {
 
 const parsePhone = clickedData => {
     var phoneNumber = getNumber(clickedData);
-    if (phoneNumber.length === 10){
-        return defaultCountryCode + phoneNumber
+    var isPossible = parsePhoneNumber('+'+phoneNumber).isPossible()
+    if (isPossible){
+        return phoneNumber
+    }
+    isPossible = parsePhoneNumber('+'+defaultCountryCode+phoneNumber).isPossible()
+    if (isPossible){
+        return  defaultCountryCode + phoneNumber
     }
     return phoneNumber
 }
