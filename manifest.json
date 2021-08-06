@@ -1,6 +1,6 @@
 {
   
-    "name": "Stormy",
+    "name": "Stormy - send whatsapp messgage without saving number",
     "version": "1.0",
     "description": "Sends Whatsapp Message to a phone Number without adding it.",
     "permissions": ["contextMenus"],
@@ -12,10 +12,10 @@
     },
     "page_action": {
         "default_icon": "./assets/extension-icons/logo-16.png",
-        "default_title": "Quacky"
+        "default_title": "Stormy - send Whatsapp Message without saving number"
     },
     "background": {
-        "scripts": ["eventPage.js"],
+        "scripts": ["libPhoneNumber.js","eventPage.js"],
         "persistent": false
     }
 }
