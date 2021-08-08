@@ -1,7 +1,7 @@
 {
-  
-    "name": "Stormy - send whatsapp messgage without saving number",
-    "version": "1.0",
+
+    "name": "Stormy- Send message without saving contact",
+    "version": "1.1",
     "description": "Sends Whatsapp Message to a phone Number without adding it.",
     "permissions": ["contextMenus"],
     "manifest_version": 2,
