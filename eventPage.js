@@ -21,13 +21,19 @@ const getNumber = texts => {
 
 const parsePhone = clickedData => {
     var phoneNumber = getNumber(clickedData);
-    var isPossible = parsePhoneNumber('+'+phoneNumber).isPossible()
-    if (isPossible){
-        return phoneNumber
+    try {
+        var isPossible = parsePhoneNumber('+'+phoneNumber).isPossible()
+        if (isPossible){
+            return phoneNumber
+        }
+
     }
-    isPossible = parsePhoneNumber('+'+defaultCountryCode+phoneNumber).isPossible()
-    if (isPossible){
-        return  defaultCountryCode + phoneNumber
+    catch(e){
+
+        var isPossible = parsePhoneNumber('+'+defaultCountryCode+phoneNumber).isPossible()
+        if (isPossible){
+            return  defaultCountryCode + phoneNumber
+        }
     }
     return phoneNumber
 }
